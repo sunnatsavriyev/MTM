@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'navbar.html' %}
+
+
+    {% block content %}
+    <!-- Carousel boshlandi -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                {% load static %}
+                <img src="{% static 'img/carousel-1.jpg' %}" class="d-block w-100" alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-12 ">
+                                <h1 class="display-2 text-white text-center mb-4">Farzandingiz uchun eng yaxshi bolalar bog'chasi maktabi</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/carousel-2.jpg' %}" class="d-block w-100" alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-12 text-white text-center">
+                                <h1 class="display-2 text-white animated slideInDown mb-4">Biz bilan birgalikda farzandingiz uchun yorqin kelajak yarating!</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button> -->
+        </div>
+    <!-- Carousel tugadi -->
+
+
+    <!-- Facilities boshlandi -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Bog'chamiz jihozlari</h1>
+                <p><b>"Kider"</b> Maktabgacha ta'lim Muossasida sizning farzandingiz uchun mukammal sharoitlar bilan taminlangan.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="facility-item">
+                        <div class="facility-icon bg-primary">
+                            <span class="bg-primary"></span>
+                            <i class="fa fa-bus-alt fa-3x text-primary"></i>
+                            <span class="bg-primary"></span>
+                        </div>
+                        <div class="facility-text bg-primary">
+                            <h3 class="text-primary mb-3">Bog'chamiz avtobusi</h3>
+                            <p class="mb-0">Bog'chamizda ta'lim oladigan o'quvchilarimizni tashish uchun avtobus yo'lga qo'yilgan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="facility-item">
+                        <div class="facility-icon bg-success">
+                            <span class="bg-success"></span>
+                            <i class="fa fa-futbol fa-3x text-success"></i>
+                            <span class="bg-success"></span>
+                        </div>
+                        <div class="facility-text bg-success">
+                            <h3 class="text-success mb-3">O'yin maydonchasi</h3>
+                            <p class="mb-0">Farzandingiz zerikmasligi uchun chiroyli o'yin maydonchalarimiz bor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="facility-item">
+                        <div class="facility-icon bg-warning">
+                            <span class="bg-warning"></span>
+                            <i class="fa fa-home fa-3x text-warning"></i>
+                            <span class="bg-warning"></span>
+                        </div>
+                        <div class="facility-text bg-warning">
+                            <h3 class="text-warning mb-3">Sog'lom oshxona</h3>
+                            <p class="mb-0">Bog'chamizda eng ko'p eʼtibor qaratiladigan joy bu - oshxona. Sizning farzandingiz isteʼmol qiladigan taomlar tajribali oshpazlarimiz tamonidan tayyorlanadi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="facility-item">
+                        <div class="facility-icon bg-info">
+                            <span class="bg-info"></span>
+                            <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
+                            <span class="bg-info"></span>
+                        </div>
+                        <div class="facility-text bg-info">
+                            <h3 class="text-info mb-3">Ijobiy ta'lim</h3>
+                            <p class="mb-0">Bizning bog'chamiz sifatli ta'lim va tarbiya beruvchi oliy maʼlumotli tarbiyachi va malakali oʻqituvchilar bilan taʼminlangan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities tugadi -->
+
+
+    <!-- About boshlandi -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-4">Bizning ishimiz va madaniy tadbirlarimiz haqida ko'proq bilib oling</h1>
+                    <p><b>"Kider"</b> Maktabgacha ta'lim muassasining maqsadi kelajak avlodlarni maktabgacha boʻlgan vaqtini mazmunli oʻtkazish va boshlangʻich taʼlim berishga qaratilgan.</p>
+                    <p class="mb-4">Shuningdek, biz bolalarning ko'proq bilim olishlari uchun muntazam ravishda tadbirlar oʻtqizib boramiz. Bu tadbirlarning har biri jonli va hayotiy voqealar asosida o'tadi. Bu orqali yosh bolalarga hayot va hayolot olami oʻrtasidagi muvozanatni uygʻunlashtirilgan holda singdiramiz.</p>
+                    
+                </div>
+                <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img class="img-fluid w-75 rounded-circle bg-light p-3" src="{% static 'img/about-1.jpg' %}" alt="">
+                        </div>
+                        <div class="col-6 text-start" style="margin-top: -150px;">
+                            <img class="img-fluid w-100 rounded-circle bg-light p-3" src="{% static 'img/about-2.jpg' %}" alt="">
+                        </div>
+                        <div class="col-6 text-end" style="margin-top: -150px;">
+                            <img class="img-fluid w-100 rounded-circle bg-light p-3" src="{% static 'img/about-3.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About tugadi -->
+
+
+    <!-- Classes boshlandi -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Muossasada o'tiladigan darslar </h1>
+                <p>Kelajak avlodlarimiz har tomonlama kuchli bo'lishi uchun har bitta fani mukammal o'zlashtirishi lozim.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="classes-item">
+                        <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/classes-1.jpg' %}" alt="">
+                        </div>
+                        <div class="bg-light rounded p-4 pt-5 mt-n5">
+                            <a class="d-block text-center h3 mt-3 mb-4" href="">San'at va chizmachilik</a>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                        <small>Teacher</small>
+                                    </div>
+                                </div>
+                                <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-primary pt-2">
+                                        <h6 class="text-primary mb-1">yosh:</h6>
+                                        <small>3-5 Yill</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-success pt-2">
+                                        <h6 class="text-success mb-1">Vaqt:</h6>
+                                        <small>9-10 AM</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-warning pt-2">
+                                        <h6 class="text-warning mb-1">Guruh:</h6>
+                                        <small>30 Bolalar</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="classes-item">
+                        <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/classes-2.jpg' %}" alt="">
+                        </div>
+                        <div class="bg-light rounded p-4 pt-5 mt-n5">
+                            <a class="d-block text-center h3 mt-3 mb-4" href="">Ranglarni boshqarish</a>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                        <small>Teacher</small>
+                                    </div>
+                                </div>
+                                <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-primary pt-2">
+                                        <h6 class="text-primary mb-1">yosh:</h6>
+                                        <small>3-5 Yill</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-success pt-2">
+                                        <h6 class="text-success mb-1">Vaqt:</h6>
+                                        <small>9-10 AM</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-warning pt-2">
+                                        <h6 class="text-warning mb-1">Guruh:</h6>
+                                        <small>30 Bolalar</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="classes-item">
+                        <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/classes-3.jpg' %}" alt="">
+                        </div>
+                        <div class="bg-light rounded p-4 pt-5 mt-n5">
+                            <a class="d-block text-center h3 mt-3 mb-4" href="">Atletika va raqs</a>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                        <small>Teacher</small>
+                                    </div>
+                                </div>
+                                <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-primary pt-2">
+                                        <h6 class="text-primary mb-1">yosh:</h6>
+                                        <small>3-5 Yill</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-success pt-2">
+                                        <h6 class="text-success mb-1">Vaqt:</h6>
+                                        <small>9-10 AM</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-warning pt-2">
+                                        <h6 class="text-warning mb-1">Guruh:</h6>
+                                        <small>30 Bolalar</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="classes-item">
+                        <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/classes-4.jpg' %}" alt="">
+                        </div>
+                        <div class="bg-light rounded p-4 pt-5 mt-n5">
+                            <a class="d-block text-center h3 mt-3 mb-4" href="">Til va so'zlashish</a>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                        <small>Teacher</small>
+                                    </div>
+                                </div>
+                                <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-primary pt-2">
+                                        <h6 class="text-primary mb-1">yosh:</h6>
+                                        <small>3-5 Yill</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-success pt-2">
+                                        <h6 class="text-success mb-1">Vaqt:</h6>
+                                        <small>9-10 AM</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-warning pt-2">
+                                        <h6 class="text-warning mb-1">Guruh:</h6>
+                                        <small>30 Bolalar</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="classes-item">
+                        <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/classes-5.jpg' %}" alt="">
+                        </div>
+                        <div class="bg-light rounded p-4 pt-5 mt-n5">
+                            <a class="d-block text-center h3 mt-3 mb-4" href="">Din va tarix</a>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                        <small>Teacher</small>
+                                    </div>
+                                </div>
+                                <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-primary pt-2">
+                                        <h6 class="text-primary mb-1">yosh:</h6>
+                                        <small>3-5 Yill</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-success pt-2">
+                                        <h6 class="text-success mb-1">Vaqt:</h6>
+                                        <small>9-10 AM</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-warning pt-2">
+                                        <h6 class="text-warning mb-1">Guruh:</h6>
+                                        <small>30 Bolalar</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="classes-item">
+                        <div class="bg-light rounded-circle w-75 mx-auto p-3">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/classes-6.jpg' %}" alt="">
+                        </div>
+                        <div class="bg-light rounded p-4 pt-5 mt-n5">
+                            <a class="d-block text-center h3 mt-3 mb-4" href="">Umumiy biyosh</a>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle flex-shrink-0" src="{% static 'img/user.jpg' %}" alt="" style="width: 45px; height: 45px;">
+                                    <div class="ms-3">
+                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
+                                        <small>Teacher</small>
+                                    </div>
+                                </div>
+                                <span class="bg-primary text-white rounded-pill py-2 px-3" href="">$99</span>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-4"   >
+                                    <div class="border-top border-3 border-primary pt-2">
+                                        <h6 class="text-primary mb-1">yosh:</h6>
+                                        <small>3-5 Yill</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-success pt-2">
+                                        <h6 class="text-success mb-1">Vaqt:</h6>
+                                        <small>9-10 AM</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="border-top border-3 border-warning pt-2">
+                                        <h6 class="text-warning mb-1">Guruh:</h6>
+                                        <small>30 Bolalar</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Classes tugadi -->
+
+    <!-- Team boshlandi -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Mashhur o'qituvchilar</h1>
+                <p>Farzandingizga ta'lim berayotgan. O'qituvchilarimiz bilan tanishib chiqing.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded-circle w-75" src="{% static 'img/team-1.jpg' %}" alt="">
+                        <div class="team-text">
+                            <h3>To'liq ismi sharif</h3>
+                            <p>inglis tili</p>
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded-circle w-75" src="{% static 'img/team-2.jpg' %}" alt="">
+                        <div class="team-text">
+                            <h3>To'liq ismi sharif</h3>
+                            <p>Matematika</p>
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded-circle w-75" src="{% static 'img/team-3.jpg' %}" alt="">
+                        <div class="team-text">
+                            <h3>To'liq ismi sharif</h3>
+                            <p>Informatika</p>
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team tugadi -->
+
+    <div class="container mt-5">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="mb-3">Fotogalereya</h1>
+            <p>Bogʻchamiz hayoti bilan tanishing</p>
+        </div>
+        <!-- Gallery -->
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img
+                src="{% static 'img/rasm1.jpg' %}"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+            />
+        
+            <img
+                src="{% static 'img/rasm2.jpg' %}"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Wintry Mountain Landscape"
+            />
+            </div>
+        
+            <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+                src="{% static 'img/rasm3.jpg' %}"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Mountains in the Clouds"
+            />
+        
+            <img
+                src="{% static 'img/rasm4.jpg' %}"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+            />
+            </div>
+        
+            <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+                src="{% static 'img/rasm5.jpg' %}"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Waves at Sea"
+            />
+        
+            <img
+                src="{% static 'img/rasm6.jpg' %}"
+                class="w-100 shadow-sm rounded mb-4"
+                alt="Yosemite National Park"
+            />
+            </div>
+        </div>
+        <!-- Gallery -->
+    </div>
+
+    <!-- Appointment boshlandi -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="bg-light rounded">
+                <div class="row g-0">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="h-100 d-flex flex-column justify-content-center p-5">
+                            <h1 class="mb-4">Ariza qoldiring</h1>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="gname" placeholder="Gurdian Name">
+                                            <label for="gname">Ariza qoldiruvchi ismi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control border-0" id="gmail" placeholder="Gurdian Email">
+                                            <label for="gmail">Ariza qoldiruvchi Emaili</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
+                                            <label for="cname">Farzandiz ismi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="cage" placeholder="Child Age">
+                                            <label for="cage">Farzandiz yoshi</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                            <label for="message">Xabar qoldiring</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Yuborish</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute w-100 h-100 rounded" src="{% static 'img/appointment.jpg' %}" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment tugadi -->
+
+    <!-- Testimonial boshlandi -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Bizning mijozlarimiz aytadilar!</h1>
+                <p>Bizning mijozlarimizning biz hiz haqimizdagi fiklirlarini ko'rishingiz mumkun.</p>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-light rounded p-5">
+                    <p class="fs-5">Assalom alekom mening qizim 4 yoshda. Uni sizlarning bogʻchangizga berganimizda 3 yoshda edi. Bir yil bo'ldi ko'p narsalarni o'rgandi. Qizim har kuni tarbiyachilarini maqtab keladi. Rahmat sizlarga.</p>
+                    <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/testimonial-1.jpg' %}" style="width: 90px; height: 90px;">
+                        <div class="ps-3">
+                            <h3 class="mb-1">Aziza Rustamova</h3>
+                            <span>Jurnalist</span>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-5">
+                    <p class="fs-5">Farzandimizga qarashga koʻp vaqtimiz yoʻq. Ayolim ham ishlaydi. Shuning uchun biz qizimizni boʻgʻchaga berishga qaror qildik va koʻp bogʻchalarni koʻrib chiqdik. Bizga <b>"Kider"</b> maʼqul boʻldi.</p>
+                    <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/testimonial-2.jpg' %}" style="width: 90px; height: 90px;">
+                        <div class="ps-3">
+                            <h3 class="mb-1">Bahrom Jumayev</h3>
+                            <span>Fotogrif</span>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-5">
+                    <p class="fs-5">Assalomu alaykum. Mening oʻgʻlim 2yoshidan boshlab sizlarning bogʻchangizga boradi. Shu vaqt oraligʻida uning fikrlash qobiliyati oʻsdi. Sanashni, harflarni farqlashni oʻrgandi. Buning uchun sizlardan minnatdorman.</p>
+                    <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
+                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{% static 'img/testimonial-3.jpg' %}" style="width: 90px; height: 90px;">
+                        <div class="ps-3">
+                            <h3 class="mb-1">Jasur Alimov</h3>
+                            <span>Doktor</span>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial tugadi -->
+    {% endblock %}
+</body>
+</html>
